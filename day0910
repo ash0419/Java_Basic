@@ -1,5 +1,5 @@
 
-public class first {
+public class day0910 {
 	/*
 	 2020-09-10
 	 자바수업 2일차
@@ -112,6 +112,9 @@ public class first {
 		  - 0은 거짓, 그 외에는 참
 		  
 		 문자열형
+		  String : 문자가 나열된 형태
+		  String a = "Hello";
+		  String b = new String("Hello");
 		 */
 		
 		//정수형 예제
@@ -166,6 +169,19 @@ public class first {
 		ch = '\u0061';
 		System.out.println("ch = " +ch);
 		System.out.printf("ch = %c\n", ch);
+		
+		/*
+		 상수
+		 	- 프로그램 실행 중 변경할 수 없는 고정된 값
+		 	final datatype 상수명 = 값;
+		 */
+		
+		int t = 3;
+		t = 4;
+		
+		final double PI = 3.14;
+//		PI = 3.15;
+		
 	}
 	
 }
