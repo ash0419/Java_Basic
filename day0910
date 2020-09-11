@@ -105,7 +105,8 @@ public class first {
 		  	double 소수점 이하 15자리
 		  	
 		 문자형 - 문자를 담을 수 있는 타입('')
-		  char : 2byte
+		  char : 2byte(유니코드 사용)
+		  
 		 논리형 - True/False
 		  - 참과 거짓
 		  - 0은 거짓, 그 외에는 참
