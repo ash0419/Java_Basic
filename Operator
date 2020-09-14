@@ -53,9 +53,9 @@ public class Operator {
 		 	++ : 중가 연산자(변수에 1 증가, a++ or ++a)
 		 	-- : 감소 연산자(변수에 1 감소, a-- or --a)
 		 	
-		 	증감 연산자
-		 		전위 : 명령문 실행 전 연산
-		 		후위 : 명령문 실행된 후 연산
+		 증감 연산자
+		 	전위 : 명령문 실행 전 연산
+		 	후위 : 명령문 실행된 후 연산
 		 */
 		int a = -1;
 		System.out.println("a = " +a);
@@ -76,5 +76,91 @@ public class Operator {
 		d = c++;
 		System.out.println(d);
 		System.out.println(c);
+		
+		int aa, bb, cc, dd;
+		
+		aa = 1;
+		bb= ++aa;	
+		cc= aa++;	
+		dd = bb++ + ++cc;	
+		
+		System.out.println("aa = " +aa);	// aa = 3
+		System.out.println("bb = " +bb);	// bb = 3
+		System.out.println("cc = " +cc);	// cc = 3
+		System.out.println("dd = " +dd);	// dd = 5
+		
+		/*
+		 대입 연산자
+		 	=  : 왼쪽의 피연산자에 오른쪽 값을 대입
+		 	
+		 복합 대입 연산자
+		 	a+=b : a = a + b
+		 	a*+b : a = a * b
+		 	
+		 비교 연산자
+		 	- 양변을 비교하여 같으면 True, 다르면 False 반환
+		 	
+		 	== : 같다
+		 	>  : 크다
+		 	<  : 작다
+		 	>= : 크거나 같다
+		 	<= : 작거나 같다
+		 	!= : 같지 않다
+		 */
+		
+		System.out.println('a' > 'b');
+		System.out.println(3 >= 2);
+		System.out.println( 3 == 2);
+		System.out.println(3 != 2);
+		System.out.println(!( 3!= 2));
+		
+		// 문자열을 비교할 때는 ==으로 비교하면 안된다
+		String str = "Hello Java";
+		String str1 = "Hello Java";
+		
+		System.out.println(str.hashCode());
+		System.out.println(str1.hashCode());
+		System.out.println(str.equals("Hello Java")); // 문자열 비교할 때 사용하는 .equal 대소문자 구분
+		
+		/*
+		 논리 연산자
+		 	- 여러가지 조건을 동시에 검사하는 경우 사용
+		 	- 비교하는 두 값이 boolean 형태이어야 함
+		 	
+		 	&&(AND) : 둘 다 True일 때 True
+		 	||(OR) : 둘 중 하나면 True여도 True
+		 	!(NOT) : True -> False, False -> True
+		 */
+		
+		int aaa = 10;
+		// 5 < x < 15
+		System.out.println((5 < aaa) && (aaa < 15));
+		System.out.println((5 < aaa) && (aaa < 15) || a % 2 != 0);
+		
+		/*
+		 비트 연산 (확인하거나 처리할 때 사용)
+		 	비트 AND(&) : 비트 단위의 AND 연산
+		 	비트 OR(|) : 비트 단위의 OR 연산
+		 	비트 XOR(^) : 비트 단위의 XOR 연산 XOR = 같지 않으면 1을 반환
+		 	비트 NOT(~) : 부호 반전
+		 	
+		 시프트 연산
+		 	>> : 오른쪽으로 비트 이동(비트 하나 이동 /2)
+		 	<< : 왼쪽으로 비트 이동(비트 하나 이동 *2)
+		 
+		 삼항 연산자
+		 	- 항이 3개인 연산자
+		 	- 조건식의 결과에 따라 결과 반환
+		 	- 조건? 항목1 (참) : 항목2 (거짓)
+		 */
+		
+		int age = 17;
+		
+		System.out.println(age > 19? "성인입니다." : "청소년입니다.");
+		
+		
+		int test;
+		test = aa> bb? aa : bb;
+		
 	}
 }
