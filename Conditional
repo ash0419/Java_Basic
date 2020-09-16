@@ -236,7 +236,7 @@ public class Conditional {
 				System.out.println("당신은 2000년 이전 출생");
 				break;
 			case '3':
-				System.out.println("단신은 2000년 이후 출생");
+				System.out.println("신은 2000년 이후 출생");
 				break;
 			}
 			System.out.println("남자");
