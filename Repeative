@@ -12,6 +12,14 @@ public class Repeative {
 		 		- if문과 기본 구조가 동일
 		 			if문 : 조건이 참이면 수행하고 끝
 		 			while문 : 조건이 참이면 수행하고 다시 조건식을 비교
+		 	
+		 	do~while문
+		 		- while문의 변형된 형태
+		 		- 명령문을 실행 후 조건을 검사
+		 		- 최소 한번은 명령문 실행
+		 	for문
+		 		- 특정한 횟수동안 작업 반복
+		 		- 초기화, 조건식, 증감식
 		 		
 		 */
 		int num = 0;
@@ -101,7 +109,7 @@ public class Repeative {
 		int number;
 		int sum = 0;
 		boolean flag = true;
-		System.out.println("합계를 구할 숫자를 입력(0을 입력하면 종료 : ");
+		System.out.println("합계를 구할 숫자를 입력(0을 입력하면 종료) : ");
 		
 		while(flag) {	// flag 값이 true이면 조건식이 참(무한반복)
 			System.out.print(">>");
@@ -114,6 +122,127 @@ public class Repeative {
 			}
 		}
 		System.out.println("입력한 합계는 : " +sum);
+		
+		int menu = 0;
+		do {
+			System.out.println("1.새로만들기");
+			System.out.println("2.파일열기");
+			System.out.println("3.파일닫기");
+			System.out.print("선택 : ");
+			menu = sc.nextInt();
+		}while(menu < 1 || menu > 3);	//do~while 뒤에는 ;을 붙인다.
+		
+		System.out.println("선택된 메뉴는 = " +menu);
+		
+		int rnd;
+		rnd = (int)(Math.random()*100 + 1);	//1 ~ 100까지 난수 생성하는 방법
+		System.out.println(rnd);
+		/*
+		 4. 숫자맞추기
+		 	1 ~ 100까지 랜덤으로 정답 숫자를 생성
+		 	while문 안에서 숫자를 입력 받고, 숫자가 정답이면 탈출
+		 	
+		 	[출력결과] (정답이 70이라고 가정)
+		 	숫자 입력 : 50
+		 	더 큰 수를 입력해보세요.
+		 	숫자 입력 : 80
+		 	더 작은 수를 입력해 보세요.
+		 	숫자 입력 : 70
+		 	정답입니다!
+		 	3회만에 맞추셨습니다.		*심화 : 몇 회만에 맞췄는지 추가로 출력
+		 */
+		
+		int answer;
+		answer = (int)(Math.random()*100 + 1);
+		boolean on_off = true;
+		int num4 = 0;
+		int count4 = 0;
+		
+		while(on_off) {
+			System.out.print("숫자입력 : ");
+			num4 = sc.nextInt();
+			if (num4 > answer) {
+				System.out.println("더 작은 수를 입력해 보세요.");
+				count4++;
+			}else if(num4 < answer) {
+				System.out.println("더 큰 수를 입력해 보세요.");
+				count4++;
+			}else {
+				System.out.println("정답입니다.");
+				System.out.println(count4 +"회만에 맞추셨습니다.");
+				on_off = false;
+			}
+		}
+		
+		//1~10까지의 합
+		int sum0 = 0;
+		for(int k = 0; k <= 10; k++) {
+			sum0 += k;
+		}
+		System.out.println("1~10까지의 합은 : " +sum0);
+		
+		//두개의 초기값 두개의 증감식
+		for(int k = 1, l = 10; k <= 10; k++, l--) {
+			System.out.printf("%d\t %d\n", k, l);
+		}
+		
+		
+		/*
+		 break문
+		 	- 반복문 종료
+		 	- 마주하게 되면 반복문 탈출
+		 	
+		 */
+		int sum_1 = 0;
+		int cnt_1 = 0;
+		
+		while(true) {
+			if(sum_1 > 100) {
+				break;
+			}	
+			++cnt_1;
+			sum_1 += cnt_1;
+			
+		}
+		
+		System.out.println("cnt_1 = " +cnt_1);
+		System.out.println("sum_1 = " +sum_1);
+		
+		/*
+		 continue
+		 	- 조건식으로 점프
+		 		while : 조건식으로 검사
+		 		for : 증감 후 조건식 검사
+		 */
+		
+		int num_1 = 0;
+		int sum_2 = 0;
+		
+		while(num_1 <=100) {
+			if(num_1 % 3 ==0) {
+				num_1++;
+				continue;
+			}
+			
+			sum_2 += num_1;
+			num_1++;
+		}
+		System.out.println("1~100까지 수 중 3의 배수를 제외한 합은 " +sum_2);
+		
+		//중첩 반복문
+		for(int l = 1; l <= 10; l++) {
+			for(int k =1; k <=10; k++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		for(int l = 2; l < 10; l++) {
+			System.out.println(l+"단");
+			for(int k = 1; k < 10; k++) {
+				System.out.printf("%d * %d = %d\n", l, k, l*k);
+			}
+		}
 		sc.close();
 	}
 }
