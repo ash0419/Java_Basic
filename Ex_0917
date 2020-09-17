@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Ex_0917 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		/*
+		 1. 0부터 시작해 99까지의 짝수들의 합을 구하는 프로그램 작성
+		 */
+		int sum1 = 0;
+		for(int i = 0; i < 100; i+=2) {
+			sum1 += i;
+		}
+		System.out.println("1부터 99까지의 짝수 합은 : " +sum1);
+		
+		/*
+		 2. 0 이하의 수가 입력될 때까지 정수를 계속 입력 받고 5의 배수와 7의 배수를 제외한 수들의 
+		 개수를 출력하는 프로그램 작성(0 이하의 수는 개수에서 제외)
+		 */
+		int input, rest = 0;
+		System.out.println("값을 입력하세요 : ");
+		
+		while(true) {
+			input = sc.nextInt();
+			
+			if(input <= 0) {
+				break;
+			}
+			
+			if(input % 5 != 0 && input % 7 != 0) {
+				rest++;
+			}
+		}
+		System.out.println("5, 7의 배수를 제외한 갯수는 : " +rest);
+		
+		/*
+		 3. 2부터 9까지의 수 중 2개를 입력 받아 입력 받은 수 사이 구구단을 출력하는 프로그램 작성
+		 */
+		
+		System.out.println("두 수를 입력하세요 : ");
+		int i = 0;
+		int j = 0;
+		i = sc.nextInt();
+		j = sc.nextInt();
+		
+		for(int l = i; l <= j; l++) {
+			for(int k =1; k < 10; k++) {
+				System.out.printf("%d * %d = %d \t", l, k, l*k);
+			}
+		}
+		
+		/*
+		 4. 하나의 숫자를 입력 받은 후 이를 시, 분, 초의 형태로 나타내는 프로그램을 작성
+		 */
+		int sec = 0;
+		sec = sc.nextInt();
+		
+	}
+}
