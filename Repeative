@@ -243,6 +243,20 @@ public class Repeative {
 				System.out.printf("%d * %d = %d\n", l, k, l*k);
 			}
 		}
+		
+		//이름 붙은 반복문
+		Loop1 : for(int l = 2; l < 10; l++) {
+			System.out.println(l+"단");
+			for(int k = 1; k < 10; k++) {
+				if(k ==5) {
+//					break;
+//					break Loop1;
+//					continue;
+					continue Loop1;
+				}
+				System.out.printf("%d * %d = %d\n", l, k, l*k);
+			}
+		}
 		sc.close();
 	}
 }
