@@ -35,24 +35,43 @@ public class Ex_0917 {
 		/*
 		 3. 2부터 9까지의 수 중 2개를 입력 받아 입력 받은 수 사이 구구단을 출력하는 프로그램 작성
 		 */
-		
+		int num1, num2;
 		System.out.println("두 수를 입력하세요 : ");
-		int i = 0;
-		int j = 0;
-		i = sc.nextInt();
-		j = sc.nextInt();
+		num1 = sc.nextInt();
+		num2 = sc.nextInt();
 		
-		for(int l = i; l <= j; l++) {
-			for(int k =1; k < 10; k++) {
-				System.out.printf("%d * %d = %d \t", l, k, l*k);
-			}
+		if(num1 > num2) {
+			int tmp = num1;
+			num1 = num2;
+			num2 = tmp;
 		}
+		for(int i = 1; i < 10; i++) {
+			for(int j = num1; j <= num2; j++) {
+				System.out.printf("%3d * %3d =  %3d",j,i,j*i);
+			}
+			System.out.println();
+		}
+		
 		
 		/*
 		 4. 하나의 숫자를 입력 받은 후 이를 시, 분, 초의 형태로 나타내는 프로그램을 작성
 		 */
-		int sec = 0;
-		sec = sc.nextInt();
+		int h = 0, s= 0, m = 0;
+		int time;
+		System.out.println("초를 입력하세요 : ");
+		time = sc.nextInt();
 		
+		for(int i = 1; i <= time; i++) {
+			if(i % 60 == 0) {
+				m++;
+			}
+			if(m == 60) {
+				h++;
+				m = 0;
+			}
+			s = time - 3600 * h - 60 * m;
+		}
+		System.out.println("시 : " +h +" 분 : " +m +" 초 : " +s);
+		sc.close();
 	}
 }
