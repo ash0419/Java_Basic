@@ -158,5 +158,97 @@ public class Array {
 			}
 		}
 		System.out.println(Arrays.toString(arr_2));
+		
+		/*
+		 로또번호 생성기
+		 1~45 숫자 중에 6개 랜덤하게 생성
+		 중복 X
+		 */
+		int[] ball = new int[45];
+		int rnd;
+		int tmp;
+		
+		for(int i = 0; i< ball.length; i++) {
+			ball[i] = i + 1;
+		}
+		
+		for(int i =0; i < 6; i++) {
+			rnd = (int)(Math.random()*45);
+			
+			tmp = ball[i];
+			ball[i] = ball[rnd];
+			ball[rnd] = tmp;
+		}
+		for(int i = 0; i < 6; i++) {
+			System.out.printf("ball[%d] = %d\n", i+1, ball[i]);
+		}
+		
+		//모스부호
+		String source = "SOSHELP";
+		String[] morse = {".-", "-...", "-.-.","-..", "."
+						,"..-.", "--.", "....","..",".---"
+						, "-.-", ".-..", "--", "-.", "---"
+						, ".--.", "--.-",".-.","...","-"
+						, "..-", "...-", ".--", "-..-","-.--"
+						, "--.." };
+
+		String result2="";
+
+		for (int i=0; i < source.length() ; i++ ) {
+			result2+=morse[source.charAt(i)-'A'];
+		}
+		System.out.println("source:"+ source);
+		System.out.println("morse:"+ result2);
+		
+		/*
+		 2차원 배열
+		 	- 행과 열로 이루어진 배열
+		 	
+		 	자료형[][] 배열이름;
+		 	int[][] student;
+		 	
+		 생성
+		 	int[][] student = new int[3][2];
+		 초기화
+		 	int[][] student = {100,200,300,1,2,3,4,5,6};
+		 	
+		 	int[][] student = {{100,200,300}, {1,2,3}, {4,5,6}};
+		 	int[][] student = {{100,200,300}, 
+		 					   {1,2,3}, 
+		 					   {4,5,6}};
+		 					   
+		 */
+		
+		//단어 맞추기
+		String[][] words = {{"chair", "의자"},
+							{"computer", "컴퓨터"},
+							{"integer", "정수"}};
+		
+		for(int i = 0; i < words.length; i++) {
+			System.out.printf("Q%d. %s의 뜻은?", i + 1, words[i][0]);
+			
+			String temp = sc.nextLine();
+			if(temp.equals(words[i][1])) {
+				System.out.println("정답입니다. \n\n");
+			}else {
+				System.out.println("틀렸습니다. 정답은 " + words[i][1] +"입니다.");
+			}
+		}
+		
+		int[][] test_2 = new int[2][2];
+		int count =1;
+		
+		for(int i = 0; i <test_2.length; i++) {
+			for (int j = 0; j < test_2[i].length; j++) {
+				test_2[i][j] = count++;
+			}
+		}
+		for(int i = 0; i <test_2.length; i++) {
+			for (int j = 0; j < test_2[i].length; j++) {
+				System.out.print(test_2[i][j]);
+			}
+			System.out.println();
+		}
+		sc.close();
 	}
 }
