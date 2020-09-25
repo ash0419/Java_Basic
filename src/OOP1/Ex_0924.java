@@ -38,6 +38,10 @@ public class Ex_0924 {
 		Calc calc = new Calc(a, b);
 		
 		System.out.println(a + " + "+ b+" = "+calc.add());
+		System.out.println(a + " - "+ b+" = "+calc.sub());
+		System.out.println(a + " * "+ b+" = "+calc.mul());
+		System.out.println(a + " / "+ b+" = "+calc.div());
+		
 		
 	} 
 	
@@ -53,9 +57,16 @@ class Calc
 		num2 = n2;
 	}
 	
-	int add()
-	{
+	int add() {
 		return num1 + num2;
 	}
-	
+	int sub() {
+		return num1 - num2;
+	}
+	int mul() {
+		return num1 * num2;
+	}
+	int div() {
+		return num1 / num2;
+	}
 }
