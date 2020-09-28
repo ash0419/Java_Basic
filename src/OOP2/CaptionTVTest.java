@@ -1,13 +1,13 @@
 package OOP2;
 
 /*
- ìƒì†
- 	- ê¸°ì¡´ì˜ í´ëž˜ìŠ¤ë¥¼ ìž¬ì‚¬ìš©í•´ì„œ ìƒˆë¡œìš´ í´ëž˜ìŠ¤ ìž‘ì„±
- 	- ë‘ í´ëž˜ìŠ¤ë¥¼ ë¶€ëª¨ì™€ ìžì‹ìœ¼ë¡œ ê´€ê³„ë¥¼ ë§ºì–´ì£¼ëŠ” ê²ƒ
- 	- ìžì‹í´ëž˜ìŠ¤ëŠ” ë¶€ëª¨í´ëž˜ìŠ¤ì˜ ëª¨ë“  ë©¤ë²„ë¥¼ ìƒì†(ìƒì„±ìž, ì´ˆê¸°í™” ë¸”ëŸ­ X)
- 	- ìžì‹ì˜ ë©¤ë²„ê°œìˆ˜ëŠ” ë¶€ëª¨ë³´ë‹¤ ì ì„ ìˆ˜ ì—†ë‹¤.
+ »ó¼Ó
+ 	- ±âÁ¸ÀÇ Å¬·¡½º¸¦ Àç»ç¿ëÇØ¼­ »õ·Î¿î Å¬·¡½º ÀÛ¼º
+ 	- µÎ Å¬·¡½º¸¦ ºÎ¸ð¿Í ÀÚ½ÄÀ¸·Î °ü°è¸¦ ¸Î¾îÁÖ´Â °Í
+ 	- ÀÚ½ÄÅ¬·¡½º´Â ºÎ¸ðÅ¬·¡½ºÀÇ ¸ðµç ¸â¹ö¸¦ »ó¼Ó(»ý¼ºÀÚ, ÃÊ±âÈ­ ºí·° X)
+ 	- ÀÚ½ÄÀÇ ¸â¹ö°³¼ö´Â ºÎ¸ðº¸´Ù ÀûÀ» ¼ö ¾ø´Ù.
  	
- 	class ìžì‹í´ëž˜ìŠ¤ extends ë¶€ëª¨í´ëž˜ìŠ¤{
+ 	class ÀÚ½ÄÅ¬·¡½º extends ºÎ¸ðÅ¬·¡½º{
  	}
  */
 class p {
@@ -50,27 +50,27 @@ class CaptionTv extends TV2 {
 }
 
 /*
- ìžë°”ì˜ ìƒì† íŠ¹ì§•
- 	- ë‹¨ì¼ ìƒì†ë§Œ í—ˆìš©
- 	- ë‹¤ì¤‘ ì†ì„± ì‚¬ìš©ì‹œ ì—¬ëŸ¬ ë³µí•©ì ì¸ ê¸°ëŠ¥ì„ ê°€ì§„ í´ëž˜ìŠ¤ì˜ êµ¬í˜„ì´ ê°€ëŠ¥í•˜ì§€ë§Œ
- 	- ì„œë¡œ ë‹¤ë¥¸ í´ëž˜ìŠ¤ë¡œë¶€í„° ìƒì† ë°›ì€ ë©¤ë²„ê°„ì˜ ì´ë¦„ì´ ê°™ì€ ê²½ìš° êµ¬ë³„ ë¶ˆê°€
- 	- ëŒ€ì‹  í´ëž˜ìŠ¤ ê°„ì˜ ê´€ê³„ê°€ ë³´ë‹¤ ëª…í™•, ì½”ë“œë¥¼ ë”ìš± ì‹ ë¢° ê°€ëŠ¥
- 	- ë¹„ì¤‘ì´ ë†’ì€ í´ëž˜ìŠ¤ í•˜ë‚˜ë§Œ ìƒì† ê´€ê³„ë¡œ ë‚˜ë¨¸ì§€ëŠ” í¬í•¨ ê´€ê³„
+ ÀÚ¹ÙÀÇ »ó¼Ó Æ¯Â¡
+ 	- ´ÜÀÏ »ó¼Ó¸¸ Çã¿ë
+ 	- ´ÙÁß ¼Ó¼º »ç¿ë½Ã ¿©·¯ º¹ÇÕÀûÀÎ ±â´ÉÀ» °¡Áø Å¬·¡½ºÀÇ ±¸ÇöÀÌ °¡´ÉÇÏÁö¸¸
+ 	- ¼­·Î ´Ù¸¥ Å¬·¡½º·ÎºÎÅÍ »ó¼Ó ¹ÞÀº ¸â¹ö°£ÀÇ ÀÌ¸§ÀÌ °°Àº °æ¿ì ±¸º° ºÒ°¡
+ 	- ´ë½Å Å¬·¡½º °£ÀÇ °ü°è°¡ º¸´Ù ¸íÈ®, ÄÚµå¸¦ ´õ¿í ½Å·Ú °¡´É
+ 	- ºñÁßÀÌ ³ôÀº Å¬·¡½º ÇÏ³ª¸¸ »ó¼Ó °ü°è·Î ³ª¸ÓÁö´Â Æ÷ÇÔ °ü°è
  */
 
 /*
  Object class
- 	- ëª¨ë“  í´ëž˜ìŠ¤ì˜ ìµœê³  ë¶€ëª¨
- 	- ë¶€ëª¨ê°€ ì—†ëŠ” í´ëž˜ìŠ¤ëŠ” ìžë™ì ìœ¼ë¡œ Object í´ëž˜ìŠ¤ ìƒì†
- 	- ìƒì† ê³„ì¸µì˜ ìµœìƒìœ„ì— ìœ„ì¹˜
- 	- ëª¨ë“  í´ëž˜ìŠ¤ëŠ” Object í´ëž˜ìŠ¤ì— ì •ì˜ëœ 11ê°œì˜ ë©”ì„œë“œë¥¼ ìƒì†
+ 	- ¸ðµç Å¬·¡½ºÀÇ ÃÖ°í ºÎ¸ð
+ 	- ºÎ¸ð°¡ ¾ø´Â Å¬·¡½º´Â ÀÚµ¿ÀûÀ¸·Î Object Å¬·¡½º »ó¼Ó
+ 	- »ó¼Ó °èÃþÀÇ ÃÖ»óÀ§¿¡ À§Ä¡
+ 	- ¸ðµç Å¬·¡½º´Â Object Å¬·¡½º¿¡ Á¤ÀÇµÈ 11°³ÀÇ ¸Þ¼­µå¸¦ »ó¼Ó
  */
 public class CaptionTVTest {
 	public static void main(String[] args) {
 		CaptionTv ctv = new CaptionTv();
 		
 		String str = "test";
-		str.equals("test");	//equalsì˜ ê²½ìš° objectí´ëž˜ìŠ¤ë¥¼ ìƒì† ë°›ì•„ì„œ ì‚¬ìš© ê°€ëŠ¥
+		str.equals("test");	//equalsÀÇ °æ¿ì objectÅ¬·¡½º¸¦ »ó¼Ó ¹Þ¾Æ¼­ »ç¿ë °¡´É
 		
 		ctv.channel = 10;
 		ctv.channelUp();
