@@ -18,59 +18,48 @@ package OOP2;
  	
  */
 
-class Point1
-{
+class Point1 {
 	int x;
 	int y;
+
 	public Point1(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
+
 	String getLocation() {
-		return "x :"+x+", y : "+y;
+		return "x :" + x + ", y : " + y;
 	}
 }
 
-class Point3d extends Point1
-{
+class Point3d extends Point1 {
 	int z;
-	public Point3d(int x, int y,int z) {
+
+	public Point3d(int x, int y, int z) {
 		super(x, y);
 		this.z = z;
 
 	}
 
-	
 }
 
-class Parent{
+class Parent {
 	int x = 10;
 }
-class Child extends Parent
-{
+
+class Child extends Parent {
 	int x = 20;
-	
+
 	void method() {
-		System.out.println("x = "+x);
-		System.out.println("this.x = "+this.x);
-		System.out.println("super.x = "+super.x);
+		System.out.println("x = " + x);
+		System.out.println("this.x = " + this.x);
+		System.out.println("super.x = " + super.x);
 	}
 }
+
 public class SuperTest {
 	public static void main(String[] args) {
 		Child c = new Child();
 		c.method();
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
