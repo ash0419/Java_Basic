@@ -1,6 +1,5 @@
 package OOP2;
 
-
 /*
  인터페이스
  	- 일종의 추상 클래스(추상클래스보다 추상화 정도가 높다)
@@ -25,5 +24,48 @@ package OOP2;
  		- 독집적인 프로그래밍 가능
  */
 public class FighterTest {
+	public static void main(String[] args) {
 
+	}
+}
+
+class _Unit {
+	int currentHp;
+	int x;
+	int y;
+}
+
+class Fighter extends _Unit implements Fightable {
+	// 인터페이스 구현 = 클래스 상속
+	// 인터페이스에 정의된 추상메서드 필히 완성
+	// 상속과 구현 동시 가능
+	
+	@Override
+	public void move(int x, int y) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void attack(_Unit u) {
+		// TODO Auto-generated method stub
+
+	}
+
+	void attack(Fightable f1) {
+
+	}
+}
+
+interface Movable {
+	public abstract void move(int x, int y);
+}
+
+interface Attackable {
+	void attack(_Unit u);
+}
+
+interface Fightable extends Movable, Attackable {
+	// 클래스처럼 상속 가능(다중 상속 허용)
+	// Object 클래스와 같은 최고 조상 X
 }
