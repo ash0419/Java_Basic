@@ -1,0 +1,82 @@
+public class test {
+
+    // 전달받은 정수형 인자를 그대로 출력하는 함수
+    static A(					)
+    {
+
+    }
+/*
+    // 전달받은 정수형 인자에 10을 더한 후 리턴하는 함수
+    static B(					)
+    {
+
+    }
+
+    // 전달받은 세 정수를 다 더한 값을 리턴하는 함수
+    static C(					)
+    {
+
+    }
+
+    // 전달받은 인자를 출력하는 함수(인자 : 정수형 2개, 문자형 1개)
+    static D(					)
+    {
+
+    }
+
+    // 소문자를 대문자로 바꾸어 출력하는 함수
+    static E(					)
+    {
+
+    }
+
+    // 대문자를 소문자를 바꾸어 리턴하는 함수
+    static F(					)
+    {
+
+    }
+
+    // 정수형 인자 1개, 문자형 인자 1개를 받아서 정수는 출력하고 문자는 리턴하는 함수
+    static G(					)
+    {
+
+    }
+
+    // 문자열을 입력받아 출력하는 함수
+    static H(					)
+    {
+
+    }
+
+    // 인자(정수1, 정수2, 문자)를 입력받아 문자 = 정수2 - 정수1 을 출력하는 함수
+    static I(					)
+    {
+
+    }
+
+*/
+
+    public static void main(String[] args) {
+        int a, b, c;
+        char ch1, ch2;
+        String str = "KoreaIT";
+
+        a = 90; b = 100; c = 120;
+        ch1 = 'a'; ch2 = 'Z';
+
+
+//        A(          );
+//        System.out.printf("%d\n", B(            ));
+//        System.out.printf("%d\n", C(            ));
+//        D(			);
+//        E(			);
+//        System.out.printf("%c\n", F(			 ));
+//        System.out.printf("%c\n", G(			 ));
+//        H(			);
+//        I(			);
+
+
+
+
+    }
+}
