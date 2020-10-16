@@ -17,7 +17,7 @@ public class API_StringClass {
 		System.out.println("---------------length");
 		s1 = "abcdef";
 		System.out.println("length = " + s1.length());
-
+		
 		System.out.println("---------------concat");
 		s1 = "AAAA";
 		s2 = s1.concat("BBBB");
@@ -104,7 +104,7 @@ public class API_StringClass {
 		System.out.println(url.startsWith("http"));
 		System.out.println(url.endsWith(".net"));
 	}
-
+	
 	private static void sscmp(String a, String b) {
 		System.out.println("a = " + a + " b = " + b);
 
