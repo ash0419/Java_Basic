@@ -41,6 +41,5 @@ public class ThreadTest6 {
 			e.printStackTrace();
 		}
 		th.interrupt();
-
 	}
 }
