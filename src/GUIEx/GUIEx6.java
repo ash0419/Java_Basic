@@ -30,7 +30,7 @@ class FlowLayoutEx extends JFrame {
 		c.add(new JButton("DIV"), BorderLayout.EAST);
 		c.add(new JButton("CALC"), BorderLayout.WEST);
 	
-		setResizable(false);
+		setResizable(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 200, 200, 200);
 		setVisible(true);
