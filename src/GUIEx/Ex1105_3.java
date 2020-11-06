@@ -7,42 +7,47 @@ import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-class Test3 extends JFrame {
-	int random = (int) (Math.random() * 100 + 1);
-	JLabel la = new JLabel("C");
+class MouseClickFrame extends JFrame {
 
-	public Test3() {
+	public MouseClickFrame() {
 		super("클릭 연습용 응용프로그램");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		Container c = getContentPane();
-		c.addMouseListener(new MyMouseListener());
+
 		c.setLayout(null);
 
-		la.setLocation(100, 100);
-		la.setSize(10, 10);
-		c.add(la);
+		JLabel label = new JLabel("C");
+		label.addMouseListener(new MouseAdapter() {
+
+			@Override
+			public void mousePressed(MouseEvent e) {
+				JLabel la = (JLabel) e.getSource();
+				Container c = la.getParent();
+
+				int xBound = c.getWidth() - la.getWidth();
+				int yBound = c.getHeight() - la.getHeight();
+
+				int x = (int) (Math.random() * xBound);
+				int y = (int) (Math.random() * yBound);
+
+				la.setLocation(x, y);
+			}
+		});
+
+		label.setLocation(100, 100);
+		label.setSize(10, 10);
+		c.add(label);
 
 		setVisible(true);
-		setSize(400, 400);
+		setSize(300, 300);
 		c.setFocusable(true);
 		c.requestFocus();
-	}
-
-	class MyMouseListener extends MouseAdapter {
-
-		@Override
-		public void mouseClicked(MouseEvent e) {
-			if (e.getComponent() != null) {
-				la.setLocation(getX() + random, getY() + random);
-			}
-		}
-
 	}
 }
 
 public class Ex1105_3 {
 	public static void main(String[] args) {
-		new Test3();
+		new MouseClickFrame();
 	}
 }
